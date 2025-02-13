@@ -1,0 +1,16 @@
+Dec 24 15:06:44.348 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Dec 24 15:06:44.348 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 50186.
+Dec 24 15:06:44.848 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 24 15:06:44.848 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\bgfgo\OneDrive\Ambiente de Trabalho\AC\Pratica\aula12\cdn_dns\project-files\dynamips 
+Dec 24 15:06:44.848 GENERAL: working_dir=C:\Users\bgfgo\OneDrive\Ambiente de Trabalho\AC\Pratica\aula12\cdn_dns\project-files\dynamips
+Dec 24 15:06:44.848 HYPERVISOR: exec_cmd: ethsw create Switch4 
+Dec 24 15:06:48.427 HYPERVISOR: exec_cmd: nio create_udp udp-99c47f3c-8c72-43a7-9edd-cecb6d745e4f 20013 127.0.0.1 20012 
+Dec 24 15:06:48.427 HYPERVISOR: exec_cmd: ethsw add_nio Switch4 udp-99c47f3c-8c72-43a7-9edd-cecb6d745e4f 
+Dec 24 15:06:48.442 HYPERVISOR: exec_cmd: ethsw set_access_port Switch4 udp-99c47f3c-8c72-43a7-9edd-cecb6d745e4f 1 
+Dec 24 15:06:48.496 HYPERVISOR: exec_cmd: nio create_udp udp-d6dbebfd-5d4a-40ac-9330-eb7452c15090 20016 127.0.0.1 20017 
+Dec 24 15:06:48.497 HYPERVISOR: exec_cmd: ethsw add_nio Switch4 udp-d6dbebfd-5d4a-40ac-9330-eb7452c15090 
+Dec 24 15:06:48.507 HYPERVISOR: exec_cmd: ethsw set_access_port Switch4 udp-d6dbebfd-5d4a-40ac-9330-eb7452c15090 1 
+Dec 24 19:59:33.489 HYPERVISOR: exec_cmd: ethsw delete Switch4 
+Dec 24 19:59:33.554 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 24 19:59:34.060 HYPERVISOR: Stopped.
+Dec 24 19:59:34.060 GENERAL: reset done.

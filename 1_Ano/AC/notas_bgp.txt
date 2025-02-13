@@ -1,0 +1,27 @@
+path sistemas autonomos:
+
+- numero mais á direita é o AS origem da rede
+- numero mais á esquerda é o AS vizinho que anuncia a rede
+
+? no path quer dizer origem incompleta
+i no path quer dizer que a rede foi introduzida no processo bgp de forma explicita (ex comando:network 192.20.0.0)
+
+i da esquerda quer dizer que a rede foi aprendida a partir do sistema autónomo onde está inserida (IGP)
+
+The OPEN message contains the BGP version number, ASN of the originating router, Hold Time, BGP Identifier, and other optional parameters that establish the session capabilities.
+
+KeepAlive messages purpose is to check if the link between the nodes is operating
+
+Updates messages servem para trocar rotas
+
+Path attributes servem para mostrar o next-hop da rede, e o AS PATH e se a origem for de IGP ou EGP
+
+um nó da rede pode mandar mensagens de update vazias para avisar o seu vizinho que já enviou todas as redes que conhecia.
+
+>> Explain why no UPDATE BGP messages were captured and Router 1 does not know that network
+192.20.1.0/20 is not accessible. Porque a rede 192.20.1.0 foi agregada com a rede 192.20.0.0/23
+
+custo administrativo de rotas aprendidas por OSPF é 110, rotas EBGP é 20 e rotas IBGP são 200. Na pergunta 9 do guiao de bgp avançado as rotas que o router 1 vai preferir são rotas OSPF porque estas têm menor custo administrativo
+
+ip as-path access-list 1 permit ^$ -> comando que filtra por AS paths vazios (rotas locais)
+

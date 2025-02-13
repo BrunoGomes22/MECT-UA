@@ -1,0 +1,22 @@
+Dec 24 15:06:43.192 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Dec 24 15:06:43.192 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 50180.
+Dec 24 15:06:43.687 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 24 15:06:43.687 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\bgfgo\OneDrive\Ambiente de Trabalho\AC\Pratica\aula12\cdn_dns\project-files\dynamips 
+Dec 24 15:06:43.687 GENERAL: working_dir=C:\Users\bgfgo\OneDrive\Ambiente de Trabalho\AC\Pratica\aula12\cdn_dns\project-files\dynamips
+Dec 24 15:06:43.687 HYPERVISOR: exec_cmd: ethsw create Switch2 
+Dec 24 15:06:48.347 HYPERVISOR: exec_cmd: nio create_udp udp-cb073466-a724-4387-9f19-2811483c80d3 20009 127.0.0.1 20008 
+Dec 24 15:06:48.347 HYPERVISOR: exec_cmd: ethsw add_nio Switch2 udp-cb073466-a724-4387-9f19-2811483c80d3 
+Dec 24 15:06:48.363 HYPERVISOR: exec_cmd: ethsw set_access_port Switch2 udp-cb073466-a724-4387-9f19-2811483c80d3 1 
+Dec 24 19:08:36.512 HYPERVISOR: exec_cmd: nio create_udp udp-5575a7f6-bd67-4127-ad7e-87fd23b2f3c8 20033 127.0.0.1 20032 
+Dec 24 19:08:36.515 HYPERVISOR: exec_cmd: ethsw add_nio Switch2 udp-5575a7f6-bd67-4127-ad7e-87fd23b2f3c8 
+Dec 24 19:08:36.527 HYPERVISOR: exec_cmd: ethsw set_access_port Switch2 udp-5575a7f6-bd67-4127-ad7e-87fd23b2f3c8 1 
+Dec 24 19:16:47.776 HYPERVISOR: exec_cmd: nio bind_filter udp-cb073466-a724-4387-9f19-2811483c80d3 2 capture 
+Dec 24 19:16:47.776 HYPERVISOR: exec_cmd: nio setup_filter udp-cb073466-a724-4387-9f19-2811483c80d3 2 en10mb C:\Users\bgfgo\OneDrive\Ambiente de Trabalho\AC\Pratica\aula12\cdn_dns\project-files\captures\RA_FastEthernet01_to_Switch2_Ethernet0.pcap 
+Dec 24 19:30:55.568 HYPERVISOR: exec_cmd: nio unbind_filter udp-cb073466-a724-4387-9f19-2811483c80d3 2 
+Dec 24 19:44:05.596 HYPERVISOR: exec_cmd: nio bind_filter udp-cb073466-a724-4387-9f19-2811483c80d3 2 capture 
+Dec 24 19:44:05.597 HYPERVISOR: exec_cmd: nio setup_filter udp-cb073466-a724-4387-9f19-2811483c80d3 2 en10mb C:\Users\bgfgo\OneDrive\Ambiente de Trabalho\AC\Pratica\aula12\cdn_dns\project-files\captures\RA_FastEthernet01_to_Switch2_Ethernet0.pcap 
+Dec 24 19:57:05.909 HYPERVISOR: exec_cmd: nio unbind_filter udp-cb073466-a724-4387-9f19-2811483c80d3 2 
+Dec 24 19:59:33.491 HYPERVISOR: exec_cmd: ethsw delete Switch2 
+Dec 24 19:59:33.552 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 24 19:59:34.026 HYPERVISOR: Stopped.
+Dec 24 19:59:34.026 GENERAL: reset done.

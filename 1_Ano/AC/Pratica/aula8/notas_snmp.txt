@@ -1,0 +1,15 @@
+SNMP Traps server para o router notificar a ocorrencias de eventos tais como uma mudança no sytem log
+
+snmpwalk para percorrer a estrutura de dados
+snmpget para obter um objeto espefico
+snmpset para definir atributos (ex: alterar o estado de uma interface)
+
+as views servem para o gestor ter acesso a objetos especificos
+snmp-server view myview system included (definições de sistema)
+snmp-server view myview interfaces included (definições de interfaces)
+
+
+para restringir acesso a um equipamento por exemplo a um router pode-se fazer:
+access-list 10 permit 192.1.1.100 (depois temos de aplicar a access-list á comunidade do router)
+
+só o pc com o ip 192.1.1.100 tem acesso ao router
