@@ -1,0 +1,33 @@
+i. MCC: 001 and MNC: 01
+ii. NR Cell Identities: 2 and TACs: 2
+iii. Supported slices at gNB1 and gNB2 (SST+SD): (sst: 0x1; sd:0x010203; sst:0x2; sd:0x11233) and (sst: 0x1; sd: 0x010203)
+iv. Supported DNN: internet
+v. List of SUPIs (UE11, UE12 and UE21): imsi-001010000000011 and imsi-001010000000012 and imsi-001010000000021
+
+processo ligação gnB's (sinais radio 5G)
+
+	-protocolos SCTP e NGAP
+
+	-NGAP para fazer o NGSetup e SCTP para dar inicio e continuidade á ligação
+
+	-a ligação do gnB é estabelecida através do bloco AMF (Access and Mobility 	 Function)
+
+	-SCTP monitors endpoint reachability by periodically sending SCTP packets that 	 contain HEARTBEAT chunks
+
+	-differença entre os NGSetupRequests do gnB1 e gnB2 é o id do gnB e as slices 	 alocadas para cada um o gnB1 tem 2 slices enquanto o gnB2 tem 1 slice
+
+processo ligação UE11
+
+	-UE11 começa por mandar ARP request para a rede, para localizar o gnb1, de 	 seguida o UE11 troca mensagens com o gnB1 através de UDP. O gNB1 fala com o 	 bloco AMF para proceder ao registo do UE11 (protocolo NGAP/NAS-5GS). AMF        	 fala com o bloco de NRF (Network Repository Function) para armazenar os   	 dados do subscritor UE11 (através de TCP)
+
+	quando fazemos sudo ip netns exec ue11 ip addr, vemos o ip do tunel e vemos o 	ip da ligação normal (uesimtun0 -> 10.60.0.1/32) this interface will be used 	to exchange the traffic in the 5G network
+
+	principais protocolos usados para associar o UE11, SSL, ARP, HTTP2, 	NGAP/NAS-5GS, PFCP, SCTP, TCP
+
+
+aplicando os filtros (ngap or pfcp or sctp), vemos que os gnb's falam constantemente para o AMF.
+
+
+
+
+	

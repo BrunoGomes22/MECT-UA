@@ -1,0 +1,54 @@
+Audio e Controlo não passam no L2CAP (ver diagrama do anexo)
+
+--> Parte A
+
+4.
+
+Na direção Host -> Controller é usado o protocolo HCI_CMD
+
+Na direção Controller -> Host é usado o protocolo HCI_EVENT
+
+5.
+
+Sempre que é enviado um pacote através do protocolo HCI_CMD pelo host, o controller responde com HCI_EVT
+
+6. 
+
+as inquiries são feitas de 10 em 10 segundos aproximadamente.
+
+o host faz o read de vários parametros do controlador 
+
+--> Parte B
+
+LE advertising reports são feitos pelo controller
+
+13. a) existem pacotes HCI_CMD(1), ATT(2), L2CAP(2), SMP(2), HCI_EVT(4)
+não existem pacotes do tipo 0x3 (SCO) porque a comunicação é assíncrona (rato)
+
+ATT (Atribute Protocol) é usado entre os endereços mac do host e do controlador
+HCI_CMD é Host para controlador
+HCI_EVENT é controlador para host
+L2CAP(logical link and adaptation protocol) é usado entre o o localhost() e MAC do device
+SMP(Security Manager Protocol) os endereços de destino e fonte são iguais ao L2CAP
+
+14.
+
+a) connection handle : 0x0e01
+
+b) MITM - man in the middle
+LTK - Long Term Key
+CSRK - Connection Signature Resolving Key
+IRK - Identity resolving key
+
+c)
+the encryption starts in frame 591 and the host sends a long term key
+
+15. Mouse profile
+
+16. ATT frames transportados em ACL e L2CAP
+
+18. o controller mandar um pacote sobre o pacote HCI_EVT para o host para proceder á desconexão do dispositivo
+
+28. o L2CAP gere o estabelecimento de ligações lógicas e adapta a informação de níveis superiores para transporte no rádio.
+
+29. SBC é um audio codec para dispositivos bluetooth
